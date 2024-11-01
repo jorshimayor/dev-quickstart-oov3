@@ -1,1 +1,15 @@
 [profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+ffi = true
+
+[profile.dev]
+rpc_url = "${KAIA_RPC_URL}"
+
+[profile.sepolia]
+rpc_url = "${SEPOLIA_RPC_URL}"
+
+remappings = [
+    "openzeppelin-contracts/=lib/openzeppelin-contracts/contracts"
+]
